@@ -8,7 +8,7 @@ function MyApplications({ setPage }) {
   const loadApplications = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/applications/my",
+        "https://hireconnect-production-220e.up.railway.app/api/applications/my",
         {
           headers: {
             Authorization: `Bearer ${localStorage.getItem("token")}`

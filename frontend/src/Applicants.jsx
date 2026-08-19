@@ -6,7 +6,7 @@ function Applicants() {
     const [message, setMessage] = useState("")
 
     const loadApplications = () => {
-        fetch("http://localhost:5000/api/applications", {
+        fetch("https://hireconnect-production-220e.up.railway.app/api/applications", {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem("token")}`
             }
@@ -34,7 +34,7 @@ function Applicants() {
     const updateStatus = async (id, status) => {
         try {
             const response = await fetch(
-                `http://localhost:5000/api/applications/${id}/status`,
+                `https://hireconnect-production-220e.up.railway.app/api/applications/${id}/status`,
                 {
                     method: "PUT",
                     headers: {

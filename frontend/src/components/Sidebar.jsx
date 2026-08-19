@@ -30,7 +30,7 @@ function Sidebar({ user, page, setPage }) {
           <div className="large-avatar">
             {currentUser.profile_image ? (
               <img
-                src={`http://localhost:5000${currentUser.profile_image}`}
+                src={`https://hireconnect-production-220e.up.railway.app${currentUser.profile_image}`}
                 alt={currentUser.name}
               />
             ) : (

@@ -15,7 +15,7 @@ function Messages({ user }) {
   const loadConversations = async () => {
     try {
       const response = await fetch(
-        "http://localhost:5000/api/messages/conversations",
+        "https://hireconnect-production-220e.up.railway.app/api/messages/conversations",
         { headers: authHeader }
       )
 
@@ -42,7 +42,7 @@ function Messages({ user }) {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/api/messages/${conversation.user_id}`,
+        `https://hireconnect-production-220e.up.railway.app/api/messages/${conversation.user_id}`,
         { headers: authHeader }
       )
 
@@ -63,7 +63,7 @@ function Messages({ user }) {
     if (!text.trim() || !selected) return
 
     try {
-      const response = await fetch("http://localhost:5000/api/messages", {
+      const response = await fetch("https://hireconnect-production-220e.up.railway.app/api/messages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -5,7 +5,7 @@ function Home({ user, setPage }) {
   const [jobs, setJobs] = useState([])
   const [profile, setProfile] = useState(null)
 
-  const API = "http://localhost:5000"
+  const API = "https://hireconnect-production-220e.up.railway.app"
 
   const loadProfile = async () => {
     try {

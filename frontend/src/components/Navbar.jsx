@@ -87,7 +87,7 @@ function Navbar({ user, logout, setPage }) {
           <div className="navbar-avatar">
             {profileImage ? (
               <img
-                src={`http://localhost:5000${profileImage}`}
+                src={`https://hireconnect-production-220e.up.railway.app${profileImage}`}
                 alt={displayUser?.name || "Profile"}
               />
             ) : (

@@ -14,7 +14,7 @@ function Jobs({ setPage }) {
     const [jobType, setJobType] = useState("")
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/jobs")
+        fetch("https://hireconnect-production-220e.up.railway.app/api/jobs")
             .then((response) => response.json())
             .then((data) => {
                 setJobs(data)
@@ -29,7 +29,7 @@ function Jobs({ setPage }) {
     const applyJob = async (jobId) => {
         try {
             const response = await fetch(
-                "http://localhost:5000/api/applications",
+                "https://hireconnect-production-220e.up.railway.app/api/applications",
                 {
                     method: "POST",
                     headers: {

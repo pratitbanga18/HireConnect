@@ -15,7 +15,7 @@ function PostJob({ user, setPage }) {
 
     try {
         const response = await fetch(
-            "http://localhost:5000/api/jobs",
+            "https://hireconnect-production-220e.up.railway.app/api/jobs",
             {
                 method: "POST",
                 headers: {

@@ -38,7 +38,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/register",
+        "https://hireconnect-production-220e.up.railway.app/api/auth/register",
         {
           method: "POST",
           headers: {
@@ -73,7 +73,7 @@ function App() {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login",
+        "https://hireconnect-production-220e.up.railway.app/api/auth/login",
         {
           method: "POST",
           headers: {

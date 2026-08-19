@@ -11,7 +11,7 @@ function Notifications({ setPage }) {
 
   const loadNotifications = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/notifications", {
+      const response = await fetch("https://hireconnect-production-220e.up.railway.app/api/notifications", {
         headers: authHeader
       })
 
@@ -35,7 +35,7 @@ function Notifications({ setPage }) {
 
   const markAllRead = async () => {
     try {
-      await fetch("http://localhost:5000/api/notifications/mark-all-read", {
+      await fetch("https://hireconnect-production-220e.up.railway.app/api/notifications/mark-all-read", {
         method: "PUT",
         headers: authHeader
       })
@@ -50,7 +50,7 @@ function Notifications({ setPage }) {
     if (!notification.is_read) {
       try {
         await fetch(
-          `http://localhost:5000/api/notifications/${notification.id}/read`,
+          `https://hireconnect-production-220e.up.railway.app/api/notifications/${notification.id}/read`,
           {
             method: "PUT",
             headers: authHeader
