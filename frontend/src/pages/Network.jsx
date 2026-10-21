@@ -15,10 +15,10 @@ function Network({ setPage }) {
   const loadAll = async () => {
     try {
       const [connRes, suggRes, pendRes, statsRes] = await Promise.all([
-        fetch("https://hireconnect-production-220e.up.railway.app/api/connections", { headers: authHeader }),
-        fetch("https://hireconnect-production-220e.up.railway.app/api/connections/suggestions", { headers: authHeader }),
-        fetch("https://hireconnect-production-220e.up.railway.app/api/connections/pending", { headers: authHeader }),
-        fetch("https://hireconnect-production-220e.up.railway.app/api/connections/stats", { headers: authHeader })
+        fetch("https://hireconnect-backend-uee7.onrender.com/api/connections", { headers: authHeader }),
+        fetch("https://hireconnect-backend-uee7.onrender.com/api/connections/suggestions", { headers: authHeader }),
+        fetch("https://hireconnect-backend-uee7.onrender.com/api/connections/pending", { headers: authHeader }),
+        fetch("https://hireconnect-backend-uee7.onrender.com/api/connections/stats", { headers: authHeader })
       ])
 
       setConnections(await connRes.json())
@@ -39,7 +39,7 @@ function Network({ setPage }) {
   const sendRequest = async (receiverId) => {
     try {
       const response = await fetch(
-        "https://hireconnect-production-220e.up.railway.app/api/connections/request",
+        "https://hireconnect-backend-uee7.onrender.com/api/connections/request",
         {
           method: "POST",
           headers: {
@@ -64,7 +64,7 @@ function Network({ setPage }) {
   const respondRequest = async (connectionId, accept) => {
     try {
       const response = await fetch(
-        `https://hireconnect-production-220e.up.railway.app/api/connections/${connectionId}/${
+        `https://hireconnect-backend-uee7.onrender.com/api/connections/${connectionId}/${
           accept ? "accept" : "reject"
         }`,
         {

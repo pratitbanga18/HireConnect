@@ -16,7 +16,7 @@ function Profile() {
     const resumeInputRef = useRef(null)
 
     const token = localStorage.getItem("token")
-    const API = "https://hireconnect-production-220e.up.railway.app"
+    const API = "https://hireconnect-backend-uee7.onrender.com"
 
     const loadProfile = async () => {
         try {

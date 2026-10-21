@@ -15,7 +15,7 @@ function Messages({ user }) {
   const loadConversations = async () => {
     try {
       const response = await fetch(
-        "https://hireconnect-production-220e.up.railway.app/api/messages/conversations",
+        "https://hireconnect-backend-uee7.onrender.com/api/messages/conversations",
         { headers: authHeader }
       )
 
@@ -42,7 +42,7 @@ function Messages({ user }) {
 
     try {
       const response = await fetch(
-        `https://hireconnect-production-220e.up.railway.app/api/messages/${conversation.user_id}`,
+        `https://hireconnect-backend-uee7.onrender.com/api/messages/${conversation.user_id}`,
         { headers: authHeader }
       )
 
@@ -63,7 +63,7 @@ function Messages({ user }) {
     if (!text.trim() || !selected) return
 
     try {
-      const response = await fetch("https://hireconnect-production-220e.up.railway.app/api/messages", {
+      const response = await fetch("https://hireconnect-backend-uee7.onrender.com/api/messages", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

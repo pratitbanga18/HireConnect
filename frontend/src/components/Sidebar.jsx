@@ -30,7 +30,7 @@ function Sidebar({ user, page, setPage }) {
           <div className="large-avatar">
             {currentUser.profile_image ? (
               <img
-                src={`https://hireconnect-production-220e.up.railway.app${currentUser.profile_image}`}
+                src={`https://hireconnect-backend-uee7.onrender.com${currentUser.profile_image}`}
                 alt={currentUser.name}
               />
             ) : (

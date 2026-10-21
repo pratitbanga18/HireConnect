@@ -18,7 +18,7 @@ function JobDetails({ user, setPage }) {
 
     try {
       const response = await fetch(
-        "https://hireconnect-production-220e.up.railway.app/api/applications",
+        "https://hireconnect-backend-uee7.onrender.com/api/applications",
         {
           method: "POST",
           headers: {
